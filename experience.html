@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences | YALA Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;600&family=Cormorant+Garamond:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #0f2922;
+            --accent: #b89550;
+            --bg-soft: #fcfbf7;
+        }
+        body { font-family: 'Pridi', sans-serif; background-color: var(--bg-soft); color: var(--primary); }
+        .serif { font-family: 'Cormorant+Garamond', serif; }
+        
+        .experience-section {
+            border-bottom: 1px solid rgba(15, 41, 34, 0.05);
+        }
+        
+        /* เอฟเฟกต์รูปภาพหรูหรา */
+        .img-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .img-container img {
+            transition: transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .img-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ตกแต่งตัวเลขลำดับ */
+        .step-number {
+            font-size: 8rem;
+            line-height: 1;
+            opacity: 0.05;
+            position: absolute;
+            top: -2rem;
+            left: -1rem;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-xl border-b border-stone-100 shadow-sm">
+        <div class="max-w-[1400px] mx-auto px-8 flex justify-between items-center h-20">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="location.href='index.html'">
+                <div class="w-8 h-8 bg-[#0f2922] flex items-center justify-center rounded-full">
+                    <span class="serif text-white text-lg font-bold">Y</span>
+                </div>
+                <div>
+                    <h1 class="serif text-xl font-bold tracking-tighter leading-none">YALA</h1>
+                </div>
+            </div>
+
+            <ul class="hidden lg:flex items-center space-x-8 text-[10px] font-medium uppercase tracking-widest">
+                <li><a href="index.html" class="hover:text-[#b89550] transition">หน้าแรก</a></li>
+                <li><a href="places.html" class="hover:text-[#b89550] transition">สถานที่ท่องเที่ยว</a></li>
+                <li><a href="experience.html" class="text-[#b89550]">ประสบการณ์</a></li>
+                <li><a href="#" class="hover:text-[#b89550] transition">ติดต่อเรา</a></li>
+            </ul>
+
+            <button class="border border-[#0f2922] text-[#0f2922] px-5 py-2 text-[10px] uppercase tracking-widest hover:bg-[#0f2922] hover:text-white transition">
+                Discover More
+            </button>
+        </div>
+    </nav>
+
+    <header class="pt-48 pb-24 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-3xl">
+                <h2 class="serif text-6xl italic leading-tight mb-6">Unforgettable <br>Moments</h2>
+                <p class="text-stone-500 font-light text-lg">รวบรวมประสบการณ์ที่คุณหาไม่ได้จากที่ไหน นอกจากที่ "ยะลา" ตั้งแต่อรรถรสของอาหารพื้นถิ่น ไปจนถึงจิตวิญญาณของชุมชน</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="experience-section py-32 px-8 overflow-hidden">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="img-container shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop" alt="Betong Chicken" class="w-full aspect-[4/5] object-cover">
+                </div>
+                <div class="relative">
+                    <span class="serif step-number">01</span>
+                    <h3 class="serif text-4xl italic mb-6 relative z-10">สุนทรียศาสตร์แห่งรสชาติ (Taste of Betong)</h3>
+                    <p class="text-stone-500 font-light leading-relaxed mb-8">
+                        ยะลาคือสวรรค์ของนักชิม โดยเฉพาะ "ไก่เบตง" อันเลื่องชื่อที่เลี้ยงด้วยวิธีธรรมชาติ จนได้เนื้อที่นุ่มเด้ง และ "ปลานิลสายน้ำไหล" ที่เลี้ยงในระบบน้ำจากภูเขา ทำให้ไม่มีกลิ่นคาวและมีรสสัมผัสที่พรีเมียมระดับส่งออก
+                    </p>
+                    <div class="flex space-x-12">
+                        <div>
+                            <span class="text-2xl font-semibold text-[#b89550]">100%</span>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-400">Authentic Ingredients</p>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-semibold text-[#b89550]">50+</span>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-400">Traditional Recipes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section py-32 px-8 bg-[#1a3c34]/5">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <span class="serif step-number">02</span>
+                    <h3 class="serif text-4xl italic mb-6 relative z-10">จิตวิญญาณพหุวัฒนธรรม (Living Heritage)</h3>
+                    <p class="text-stone-500 font-light leading-relaxed mb-8">
+                        สัมผัสความงดงามของการอยู่ร่วมกันอย่างสันติระหว่างชาวไทยพุทธ มุสลิม และจีน ที่สะท้อนผ่านสถาปัตยกรรมมัสยิดกลางยะลา ศาลเจ้าแม่ลิ้มกอเหนี่ยว และวัดคูหาภิมุข ความหลากหลายที่หลอมรวมเป็นหนึ่งเดียวคือเสน่ห์ที่แท้จริง
+                    </p>
+                    <button class="flex items-center text-[#b89550] font-semibold text-xs uppercase tracking-[0.2em]">
+                        Explore Community Stories <i data-lucide="chevron-right" class="ml-2 w-4 h-4"></i>
+                    </button>
+                </div>
+                <div class="order-1 lg:order-2 img-container shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768b921?q=80&w=1200&auto=format&fit=crop" alt="Culture" class="w-full aspect-[4/5] object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section py-32 px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="img-container shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop" alt="Nature" class="w-full aspect-[4/5] object-cover">
+                </div>
+                <div class="relative">
+                    <span class="serif step-number">03</span>
+                    <h3 class="serif text-4xl italic mb-6 relative z-10">การบำบัดจากขุนเขา (Mountain Wellness)</h3>
+                    <p class="text-stone-500 font-light leading-relaxed mb-8">
+                        ตื่นเช้ามาเพื่อพบกับโอโซนที่บริสุทธิ์ที่สุด ณ ป่าฮาลาบาลา หรือแช่น้ำร้อนเบตงธรรมชาติเพื่อความผ่อนคลาย ยะลาไม่ใช่เพียงจุดหมายปลายทาง แต่คือการพักผ่อนเพื่อเติมพลังชีวิตอย่างแท้จริง
+                    </p>
+                    <div class="bg-white p-6 border-l-4 border-[#b89550] shadow-sm italic text-stone-600">
+                        "ที่นี่... เวลาจะหมุนช้าลง เพื่อให้คุณเห็นความงามได้ชัดขึ้น"
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#0f2922] text-white py-20 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start border-b border-white/10 pb-12">
+            <div>
+                <h2 class="serif text-3xl italic mb-4">Yala Heritage</h2>
+                <p class="text-stone-400 text-sm max-w-xs font-light">The southern legacy is waiting for you.</p>
+            </div>
+            <div class="mt-8 md:mt-0 flex space-x-12">
+                <p class="text-xs uppercase tracking-widest text-stone-500">Instagram</p>
+                <p class="text-xs uppercase tracking-widest text-stone-500">YouTube</p>
+                <p class="text-xs uppercase tracking-widest text-stone-500">Facebook</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 text-[10px] text-stone-600 uppercase tracking-widest">
+            © 2026 YALA Tourism Experience. Crafted for Excellence.
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
