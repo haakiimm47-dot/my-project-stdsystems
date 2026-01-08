@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | YALA Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;600&family=Cormorant+Garamond:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #0f2922;
+            --accent: #b89550;
+            --bg-soft: #fcfbf7;
+        }
+        body { font-family: 'Pridi', sans-serif; background-color: var(--bg-soft); color: var(--primary); }
+        .serif { font-family: 'Cormorant+Garamond', serif; }
+        
+        /* สไตล์สำหรับการ์ดสถานที่ */
+        .place-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        .place-card:hover .place-image { transform: scale(1.08); }
+        .place-image { transition: transform 0.6s ease; }
+        
+        /* ปุ่ม Filter */
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-xl border-b border-stone-100 shadow-sm">
+        <div class="max-w-[1400px] mx-auto px-8 flex justify-between items-center h-20">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="location.href='index.html'">
+                <div class="w-8 h-8 bg-[#0f2922] flex items-center justify-center rounded-full">
+                    <span class="serif text-white text-lg font-bold">Y</span>
+                </div>
+                <div>
+                    <h1 class="serif text-xl font-bold tracking-tighter leading-none">YALA</h1>
+                </div>
+            </div>
+
+            <ul class="hidden lg:flex items-center space-x-8 text-[10px] font-medium uppercase tracking-widest">
+                <li><a href="index.html" class="hover:text-[#b89550] transition">หน้าแรก</a></li>
+                <li><a href="#" class="text-[#b89550]">สถานที่ท่องเที่ยว</a></li>
+                <li><a href="#" class="hover:text-[#b89550] transition">ประสบการณ์</a></li>
+                <li><a href="#" class="hover:text-[#b89550] transition">ติดต่อเรา</a></li>
+            </ul>
+
+            <button class="bg-[#0f2922] text-white px-5 py-2 text-[10px] uppercase tracking-widest hover:bg-[#b89550] transition">
+                Book a Guide
+            </button>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 px-8 bg-stone-100">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="serif italic text-xl text-[#b89550] mb-2 block">Our Destinations</span>
+            <h2 class="text-5xl font-light tracking-tight mb-8">ค้นพบความงามที่ซ่อนอยู่</h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 mt-10">
+                <button onclick="filterPlaces('all')" class="filter-btn active px-6 py-2 border border-stone-300 rounded-full text-xs uppercase tracking-widest transition-all">ทั้งหมด</button>
+                <button onclick="filterPlaces('nature')" class="filter-btn px-6 py-2 border border-stone-300 rounded-full text-xs uppercase tracking-widest transition-all">ธรรมชาติ</button>
+                <button onclick="filterPlaces('culture')" class="filter-btn px-6 py-2 border border-stone-300 rounded-full text-xs uppercase tracking-widest transition-all">วัฒนธรรม</button>
+                <button onclick="filterPlaces('landmark')" class="filter-btn px-6 py-2 border border-stone-300 rounded-full text-xs uppercase tracking-widest transition-all">แลนด์มาร์ค</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 px-8 max-w-7xl mx-auto">
+        <div id="places-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="place-card group" data-category="nature landmark">
+                <div class="relative aspect-[4/5] bg-stone-200 mb-6 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1590001158193-798d30d27910?q=80&w=1000&auto=format&fit=crop" alt="อัยเยอร์เวง" class="place-image object-cover w-full h-full opacity-90 group-hover:opacity-100">
+                    <div class="absolute top-4 left-4 bg-white/80 backdrop-blur px-3 py-1 text-[10px] tracking-widest uppercase">Betong, Yala</div>
+                </div>
+                <h3 class="serif text-2xl italic mb-2">สกายวอล์คอัยเยอร์เวง</h3>
+                <p class="text-stone-500 text-sm font-light leading-relaxed mb-4">สัมผัสทะเลหมอกในระดับความสูงเหนือเมฆ พร้อมทางเดินกระจกใสที่ยาวที่สุดในอาเซียน</p>
+                <div class="flex items-center text-[#b89550] text-xs font-bold uppercase tracking-widest cursor-pointer">
+                    Explore Details <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+
+            <div class="place-card group" data-category="culture landmark">
+                <div class="relative aspect-[4/5] bg-stone-200 mb-6 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1582650840001-9c595377306a?q=80&w=1000&auto=format&fit=crop" alt="เบตง" class="place-image object-cover w-full h-full opacity-90 group-hover:opacity-100">
+                    <div class="absolute top-4 left-4 bg-white/80 backdrop-blur px-3 py-1 text-[10px] tracking-widest uppercase">City Center</div>
+                </div>
+                <h3 class="serif text-2xl italic mb-2">อุโมงค์มงคลฤทธิ์</h3>
+                <p class="text-stone-500 text-sm font-light leading-relaxed mb-4">อุโมงค์รถยนต์ลอดใต้ภูเขาแห่งแรกของประเทศไทย สัญลักษณ์แห่งความรุ่งเรืองของเมืองเบตง</p>
+                <div class="flex items-center text-[#b89550] text-xs font-bold uppercase tracking-widest cursor-pointer">
+                    Explore Details <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+
+            <div class="place-card group" data-category="nature">
+                <div class="relative aspect-[4/5] bg-stone-200 mb-6 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1000&auto=format&fit=crop" alt="เขื่อนบางลาง" class="place-image object-cover w-full h-full opacity-90 group-hover:opacity-100">
+                    <div class="absolute top-4 left-4 bg-white/80 backdrop-blur px-3 py-1 text-[10px] tracking-widest uppercase">Bannang Sata</div>
+                </div>
+                <h3 class="serif text-2xl italic mb-2">เขื่อนบางลาง</h3>
+                <p class="text-stone-500 text-sm font-light leading-relaxed mb-4">ล่องเรือชมทัศนียภาพของ "เกาะทวด" และผืนป่าฮาลาบาลาที่สมบูรณ์ที่สุดในภาคใต้</p>
+                <div class="flex items-center text-[#b89550] text-xs font-bold uppercase tracking-widest cursor-pointer">
+                    Explore Details <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-[#0f2922] text-white py-20 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start border-b border-white/10 pb-12">
+            <div class="mb-10 md:mb-0">
+                <h2 class="serif text-3xl italic mb-4">Yala Heritage</h2>
+                <p class="text-stone-400 text-sm max-w-xs font-light">เปิดมุมมองใหม่สู่ใต้สุดสยาม ความงามที่คุณอาจไม่เคยสัมผัส</p>
+            </div>
+            <div class="grid grid-cols-2 gap-20">
+                <div>
+                    <h5 class="text-[10px] uppercase tracking-[0.2em] text-[#b89550] mb-6">Discover</h5>
+                    <ul class="space-y-3 text-sm font-light text-stone-300">
+                        <li><a href="#" class="hover:text-white transition">Nature</a></li>
+                        <li><a href="#" class="hover:text-white transition">Culture</a></li>
+                        <li><a href="#" class="hover:text-white transition">Food</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-[10px] uppercase tracking-[0.2em] text-[#b89550] mb-6">Social</h5>
+                    <ul class="space-y-3 text-sm font-light text-stone-300">
+                        <li><a href="#" class="hover:text-white transition">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 text-[10px] text-stone-500 uppercase tracking-widest flex justify-between">
+            <p>© 2026 YALA Tourism Authority</p>
+            <p>Designed for Excellence</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // ระบบ Filter สถานที่
+        function filterPlaces(category) {
+            const cards = document.querySelectorAll('.place-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // จัดการปุ่ม Active
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            // จัดการการแสดงผลการ์ด
+            cards.forEach(card => {
+                const categories = card.getAttribute('data-category');
+                if (category === 'all' || categories.includes(category)) {
+                    card.style.display = 'block';
+                    setTimeout(() => card.style.opacity = '1', 10);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
