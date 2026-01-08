@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | YALA Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;600&family=Cormorant+Garamond:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #0f2922;
+            --accent: #b89550;
+            --bg-soft: #fcfbf7;
+        }
+        body { font-family: 'Pridi', sans-serif; background-color: var(--bg-soft); color: var(--primary); }
+        .serif { font-family: 'Cormorant+Garamond', serif; }
+        
+        .input-field {
+            border: none;
+            border-bottom: 1px solid #e2ded0;
+            background: transparent;
+            padding: 1rem 0;
+            width: 100%;
+            transition: border-color 0.3s ease;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .contact-card {
+            background: white;
+            transition: transform 0.3s ease;
+        }
+        .contact-card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-xl border-b border-stone-100 shadow-sm">
+        <div class="max-w-[1400px] mx-auto px-8 flex justify-between items-center h-20">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="location.href='index.html'">
+                <div class="w-8 h-8 bg-[#0f2922] flex items-center justify-center rounded-full">
+                    <span class="serif text-white text-lg font-bold">Y</span>
+                </div>
+                <div>
+                    <h1 class="serif text-xl font-bold tracking-tighter leading-none">YALA</h1>
+                </div>
+            </div>
+            <ul class="hidden lg:flex items-center space-x-8 text-[10px] font-medium uppercase tracking-widest">
+                <li><a href="index.html" class="hover:text-[#b89550] transition">หน้าแรก</a></li>
+                <li><a href="places.html" class="hover:text-[#b89550] transition">สถานที่ท่องเที่ยว</a></li>
+                <li><a href="experience.html" class="hover:text-[#b89550] transition">ประสบการณ์</a></li>
+                <li><a href="contact.html" class="text-[#b89550]">ติดต่อเรา</a></li>
+            </ul>
+            <button class="bg-[#0f2922] text-white px-5 py-2 text-[10px] uppercase tracking-widest hover:bg-[#b89550] transition">
+                Start Journey
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-40 pb-20 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+                
+                <div class="space-y-12">
+                    <div>
+                        <span class="serif italic text-xl text-[#b89550] mb-2 block">Connect with us</span>
+                        <h2 class="text-6xl font-light tracking-tight mb-6 leading-tight">ร่วมเดินทางไป <br>พร้อมกับเรา</h2>
+                        <p class="text-stone-500 font-light leading-relaxed max-w-md">
+                            หากคุณมีคำถามเกี่ยวกับการเดินทาง หรือต้องการคำแนะนำพิเศษเกี่ยวกับจังหวัดยะลา ทีมงานของเราพร้อมให้ข้อมูลเพื่อทำให้ทริปของคุณสมบูรณ์แบบที่สุด
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="contact-card p-8 border border-stone-100 shadow-sm">
+                            <i data-lucide="mail" class="w-6 h-6 mb-4 text-[#b89550]"></i>
+                            <h4 class="text-xs uppercase tracking-widest text-stone-400 mb-2">Email Us</h4>
+                            <p class="text-sm font-medium">hello@yalatourism.go.th</p>
+                        </div>
+                        <div class="contact-card p-8 border border-stone-100 shadow-sm">
+                            <i data-lucide="phone" class="w-6 h-6 mb-4 text-[#b89550]"></i>
+                            <h4 class="text-xs uppercase tracking-widest text-stone-400 mb-2">Call Us</h4>
+                            <p class="text-sm font-medium">+66 73 212 111</p>
+                        </div>
+                        <div class="contact-card p-8 border border-stone-100 shadow-sm">
+                            <i data-lucide="map-pin" class="w-6 h-6 mb-4 text-[#b89550]"></i>
+                            <h4 class="text-xs uppercase tracking-widest text-stone-400 mb-2">Office</h4>
+                            <p class="text-sm font-medium">ตัวเมืองยะลา, จ.ยะลา 95000</p>
+                        </div>
+                        <div class="contact-card p-8 border border-stone-100 shadow-sm">
+                            <i data-lucide="clock" class="w-6 h-6 mb-4 text-[#b89550]"></i>
+                            <h4 class="text-xs uppercase tracking-widest text-stone-400 mb-2">Working Hours</h4>
+                            <p class="text-sm font-medium">08:30 - 16:30 (Mon-Fri)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-12 shadow-xl border border-stone-50">
+                    <h3 class="serif text-3xl italic mb-10">ส่งข้อความถึงเรา</h3>
+                    <form action="#" class="space-y-8">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <label class="text-[10px] uppercase tracking-widest text-stone-400">First Name</label>
+                                <input type="text" class="input-field" placeholder="ชื่อของคุณ">
+                            </div>
+                            <div>
+                                <label class="text-[10px] uppercase tracking-widest text-stone-400">Last Name</label>
+                                <input type="text" class="input-field" placeholder="นามสกุล">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-stone-400">Email Address</label>
+                            <input type="email" class="input-field" placeholder="email@example.com">
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-stone-400">Subject</label>
+                            <select class="input-field">
+                                <option>สอบถามข้อมูลท่องเที่ยวทั่วไป</option>
+                                <option>ขอวิทยากรนำเที่ยวชุมชน</option>
+                                <option>แจ้งปัญหาหรือข้อเสนอแนะ</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-stone-400">Message</label>
+                            <textarea rows="4" class="input-field" placeholder="เขียนข้อความของคุณที่นี่..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#0f2922] text-white py-4 text-xs uppercase tracking-[0.3em] hover:bg-[#b89550] transition-colors duration-500 mt-4 shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="h-[400px] w-full grayscale contrast-125 opacity-80 hover:grayscale-0 transition-all duration-1000">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126935.535078505!2d101.2140411!3d6.5552319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b14798622c608f%3A0x10346c5fa8a45c0!2sYala!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <footer class="bg-[#0f2922] text-white py-16 px-8 text-center">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="serif text-2xl italic mb-6">Yala Heritage</h2>
+            <div class="flex justify-center space-x-8 mb-8">
+                <a href="#" class="text-stone-500 hover:text-white transition uppercase text-[10px] tracking-widest">Privacy Policy</a>
+                <a href="#" class="text-stone-500 hover:text-white transition uppercase text-[10px] tracking-widest">Terms of Service</a>
+            </div>
+            <p class="text-[10px] text-stone-600 uppercase tracking-widest">© 2026 YALA Tourism Authority. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
